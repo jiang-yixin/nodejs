@@ -1,0 +1,13 @@
+<h1>My todo list</h1>
+
+<ul>
+    <% lists.forEach(function(list, index) { %>
+        <li><a href="/todo/delete/<%= index %>">x</a> <%= list %></li>
+    <% }); %>
+</ul>
+
+<form action="/todo/ajouter" method="post">
+    <label for="inputText">New task</label>
+    <input type="text" name="inputText" id="inputText" autofocus />
+    <input type="submit" />
+</form>
